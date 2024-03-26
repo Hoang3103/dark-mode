@@ -1,0 +1,111 @@
+body {
+    background-color: #dbfbff; 
+    color: #000; 
+    transition: background-color 0.3s ease;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.s-container{
+    align-self: center;
+    width: 50%;
+     border: 2px solid red; 
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+.box{
+    width: 50%;
+    height: 50vh;
+    border: 2px solid red; 
+    justify-content: center;
+}
+ .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.container{
+    margin-left: 30%;
+    background-color: #868686;
+    border: 2px solid #ffffff; 
+    width: 100px;
+    height: 43px;
+    position: relative;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.container i{
+    /* padding: 10.2px; */
+    /* flex: 1; */
+    /* position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between; */
+    margin: 0 10px;
+}
+#sun{
+    animation: rotate  8s linear infinite;
+}
+#moon{
+    animation: rotate2  3s linear infinite;
+    /* transition: transform 3s ease; */
+}
+.moving-element {
+    width: 37px;
+    height: 37px;
+    margin-left: -95px; 
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: relative;
+    transition: transform 0.5s ease;
+     display: flex;
+    align-items: center;
+    justify-content: center; 
+    z-index: 1000;
+    cursor: pointer;
+}
+/* .moving-element:active{
+    background-color: rgb(136, 136, 136);
+} */
+.moving-element:active{
+    background-color: rgb(216, 216, 216);
+}
+
+/* khai báo bên js */
+.moved {
+    transform: translateX(55px); /* Dịch chuyển phần tử sang phải */
+} 
+.dark-mode {
+    background-color: #222222e1; /* Background màu đen cho chế độ ban đêm */
+    color: #fff; /* Màu văn bản là trắng */
+    /* .container{
+        border: 2px solid rgb(167, 167, 167);
+    } */
+}
+
+
+/* Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Góc quay ban đầu là 0 độ */
+    }
+    to {
+        transform: rotate(360deg); /* Góc quay cuối cùng là 360 độ */
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(-10deg); /* Góc quay ban đầu là 0 độ */
+    }
+    50% {
+        transform: rotate(13deg); /* Góc quay cuối cùng là 360 độ */
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
